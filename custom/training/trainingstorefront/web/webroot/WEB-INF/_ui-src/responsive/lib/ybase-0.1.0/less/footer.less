@@ -1,0 +1,243 @@
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//                          BASE STYLES
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+
+.main-footer {
+  margin:60px 0 0;
+  background: @footer-background;
+  color: @footer-text-color;
+  font-weight:300;
+
+  > .container {
+    padding-left: @grid-gutter-width/2;
+    padding-right: @grid-gutter-width/2;
+  }
+
+  a {
+    color: @footer-text-color;
+    font-size: 14px;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .footer-dropdown {
+    padding: 0;
+  }
+
+  select.form-control {
+    padding: 2px 13px;
+  }
+
+  .links {
+    text-align: center;
+
+    ul {
+      margin:0;
+      padding-left:0;
+      list-style:none;
+      width:100%;
+
+      li {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  .social-links {
+    padding: 0px 0px 30px;
+
+    ul {
+      display: inline-block;
+      margin: 0px;
+      width: 100%;
+      padding: 0;
+
+      li {
+        float: left;
+        width: 50%;
+        display: inline-block;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+
+  .form-control {
+    cursor: pointer;
+    background-color: @footer-background;
+    color: @footer-text-color;
+    padding: 7px 10px;
+    height: 26px;
+    line-height: 20px;
+    font-size: 14px;
+
+    option {
+      background-color: @footer-background;
+    }
+
+    &:focus::-ms-value {
+      background-color: @footer-background;
+    }
+  }
+
+  .copyright {
+    background: @copyright-background;
+    padding: 25px 0;
+    color: @copyright-color;
+    text-align: center;
+  }
+
+}
+
+#lang-form {
+  width: 45%;
+  float: left;
+}
+
+#currency-form {
+  width: 45%;
+  float: right;
+}
+
+.offcanvasNoBorder {
+  border-bottom:0;
+}
+
+
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//                          DESKTOP STYLES
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+
+
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//                          TABLET STYLES
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+
+@media (max-width: @screen-sm-max) {
+
+  .main-footer {
+
+    & > .container,
+    .no-space > .container {
+      padding-top: 30px;
+    }
+
+    .container-fluid {
+      padding: 16px 0;
+    }
+
+    .footer-right {
+      border-top: 1px solid @footer-border-color;
+      padding: 30px 16px 60px;
+      margin-top: 25px;
+    }
+
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+
+  .main-footer {
+
+    & > .container,
+    .no-space > .container {
+      padding-top: 45px;
+      padding-bottom: 5px;
+    }
+
+    a {
+      color: @footer-text-color;
+    }
+
+    .links {
+      text-align: left;
+    }
+
+    .social-links {
+      ul {
+        li {
+          &::last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    .footer-dropdown {
+      padding: 0px 0px 30px;
+    }
+
+  }
+}
+
+@media (min-width: @screen-md-min) {
+
+  .main-footer {
+
+    & > .container,
+    .no-space > .container {
+      padding: 45px 0;
+    }
+
+    .footer-right {
+      padding: 0px 10px 0 0;
+    }
+
+    .footer-right {
+      border: none;
+      margin: 0;
+      padding: 0px 10px 0 0;
+    }
+
+    .social-links {
+      padding: 0px 0px 30px;
+    }
+
+  }
+
+}
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .footer-left {
+    padding: 0;
+  }
+}
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//                          MOBILE STYLES
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************

@@ -1,0 +1,266 @@
+@media (min-width: @screen-md-min) {
+  .product-list-wrapper {
+    padding: 0;
+  }
+}
+
+.results {
+  h1 {
+    .page-headline();
+    margin-top: @grid-gutter-width;
+    padding-left: @grid-gutter-width/2;
+    padding-bottom: 0;
+  }
+}
+
+.product-listing{
+	.list-unstyled;
+
+	.promo{
+		.text-success;
+		margin-bottom:  (@grid-gutter-width/2);
+	}
+	
+
+	.price-panel{
+		text-align: right;
+	}
+	
+
+	a.name{
+		display: block;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin: 0 0 (@grid-gutter-width/2) 106px;
+		color: inherit;
+
+	} 
+
+	.description{
+		.hidden-xs;
+		margin: 0 210px 0 106px;
+	}
+
+
+
+	.addtocart{
+		clear:both;
+		text-align: center;
+		padding:  (@grid-gutter-width/2) 0 0 0;
+
+		button{
+			margin-bottom: (@grid-gutter-width/4);
+		}
+    @media (min-width: @screen-md-min) {
+		  .actions-container-for-ProductGridComponent > div {
+        display: inline-block;
+        width: 100%;
+      }
+
+      .pickup-in-store-available {
+        .ProductGridComponent-ListPickUpInStoreAction,
+        .ProductGridComponent-ListAddToCartAction,
+        .SearchResultsList-ListPickUpInStoreAction,
+        .SearchResultsList-ListAddToCartAction {
+          width: 49%;
+        }
+      }
+    }
+		@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+			.actions-container-for-ProductGridComponent > div {
+				float: left;
+			}
+
+			.pickup-in-store-available {
+				margin: 0 -(@grid-gutter-width/5);
+
+				.ProductGridComponent-ListPickUpInStoreAction,
+				.ProductGridComponent-ListAddToCartAction,
+				.SearchResultsList-ListPickUpInStoreAction,
+				.SearchResultsList-ListAddToCartAction {
+					padding: 0 (@grid-gutter-width/6);
+				}
+			}
+		}
+	}
+
+
+
+
+	&.product-list{
+
+		.product-item{
+			padding: @grid-gutter-width;
+		}
+
+		.thumb{
+			float: left;
+			margin-right:  (@grid-gutter-width/2);
+			display: block;
+		}
+
+		.price-panel{
+			float: right;
+			width: 200px;
+		}
+
+		.addtocart{
+			button{
+				& + button{
+					margin-left: (@grid-gutter-width/2);
+				}
+			}
+		}
+
+		.ProductListComponent-ListPickUpInStoreAction,
+		.ProductListComponent-ListAddToCartAction,
+		.SearchResultsList-ListPickUpInStoreAction,
+		.SearchResultsList-ListAddToCartAction{
+			.make-xs-column(6);
+			.make-sm-column(4);
+			.make-sm-column-push(4);
+		}
+
+
+		@media (max-width: @screen-xs-max) { 
+			.price-panel{
+				text-align: left;
+				float:none;
+				margin-left: 106px;
+				width: auto;
+			}
+		}
+	}
+
+
+
+
+	&.product-grid{
+		.flex-display(flex);
+		.flex-wrap(wrap);
+
+		.product-item{
+			.make-xs-column(6);
+			.make-sm-column(3);
+			.make-md-column(3);
+			.make-lg-column(3);
+
+			padding:  @grid-gutter-width;
+			.flex-display(flex);
+			.flex-direction(column);
+
+			// fix for Safari
+			&:first-child {
+				margin-left: -1px;
+			}
+		}
+
+		.thumb{
+      display: block;
+      margin-bottom:  (@grid-gutter-width/2);
+      text-align: center;
+      height: 180px;
+		  overflow: hidden;
+
+			img{
+        width: 100%;
+        height: auto;
+        max-width: 140px;
+			}
+
+		}
+
+
+		.details{
+      text-align: center;
+      margin: 0 auto;
+		  .flex(1 0 auto);
+
+
+		  .name{
+        margin: 0;
+        font-weight: 600;
+        font-size: 16px;
+        padding-bottom: (@grid-gutter-width/2);
+			  height: 70px;
+			  overflow: hidden;
+			  color: @headline-color;
+			}
+          
+      .price {
+			  font-size: 18px;
+      }
+
+      .promo {
+        color: @item-promo-color;
+        font-size: 14px;
+        font-weight: bold;
+      }
+		}
+
+		// Clearfixes
+		@media (min-width: @screen-sm-min) {
+			.product-item:nth-child(4n+1) {
+				clear: both;
+			}
+		}
+
+		@media (max-width: @screen-xs-max) {
+			.product-item:nth-child(2n+1) {
+				clear: both;
+			}
+
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+.search-empty{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+
+	.headline{
+		margin-bottom: 20px;
+	}
+
+
+	.search-suggestions{
+		margin-bottom: 20px;
+	}
+}
+
+
+
+
+
+//Product Category Page styling
+
+.product-category-page{
+    .product-categories{
+        .refine-bar{
+            padding-bottom:(@grid-gutter-width/2);
+            padding-top:(@grid-gutter-width/2);
+        }
+      	.pcp-prod,
+      	.pcp-banner{
+          	padding-left: 0;
+          	padding-right: 0;
+      	}
+
+        .pcp-banner .simple-responsive-banner-component{
+            margin-right: -20px;
+        }
+
+      	.pcp-banner{
+          	padding-top:(@grid-gutter-width/2);
+      	}
+    }
+}

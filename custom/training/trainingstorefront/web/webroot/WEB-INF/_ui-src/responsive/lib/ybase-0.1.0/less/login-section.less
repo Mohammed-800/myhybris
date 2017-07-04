@@ -1,0 +1,52 @@
+.login-section, .register-section{
+	.headline{
+		.page-headline();
+	}
+}
+
+.forgotten-password{
+	form & {
+    margin-bottom: 25px;
+  }
+
+  &.alert {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+	.description{
+		margin-bottom: (@grid-gutter-width/2);
+	}
+
+  #colorbox & .btn-primary {
+    margin-top: 35px;
+  }
+}
+
+.register-form-action, .login-form-action {
+  margin-top: 35px;
+}
+
+.forgotten-password + .login-form-action {
+	margin-top: 0;
+}
+
+@media (max-width: @screen-xs-max) {
+	.login-form-action {
+		.btn-default {
+			margin-top: @grid-gutter-width * 1.5;
+		}
+	}
+}
+
+@media (max-width: @screen-xs-max) {
+	.login-section,
+  .register-section {
+
+		.forgotten-password{
+			margin-bottom: 45px;
+		}
+		
+	}
+
+}

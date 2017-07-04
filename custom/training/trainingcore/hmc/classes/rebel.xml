@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.zeroturnaround.com">
+  <classpath>
+    <dir name="D:\2017\hybris\hybris-6.0\hybris\bin\custom\training\trainingcore/hmc/classes" />
+  </classpath>
+</application>
